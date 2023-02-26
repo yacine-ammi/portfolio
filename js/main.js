@@ -240,52 +240,36 @@ $(document).ready(function() {
 	------------------------------------------------------ */
 
 	/* local validation */
-	$('#contactForm').validate({
-
-		/* submit via ajax */
-		submitHandler: function(form) {
-
-			var sLoader = $('#submit-loader');
-
-			$.ajax({      	
-
-		      type: "POST",
-		      url: "inc/sendEmail.php",
-		      data: $(form).serialize(),
-		      beforeSend: function() { 
-
-		      	sLoader.fadeIn(); 
-
-		      },
-		      success: function(msg) {
-
-	            // Message was sent
-	            if (msg == 'OK') {
-	            	sLoader.fadeOut(); 
-	               $('#message-warning').hide();
-	               $('#contactForm').fadeOut();
-	               $('#message-success').fadeIn();   
-	            }
-	            // There was an error
-	            else {
-	            	sLoader.fadeOut(); 
-	               $('#message-warning').html(msg);
-		            $('#message-warning').fadeIn();
-	            }
-
-		      },
-		      error: function() {
-
-		      	sLoader.fadeOut(); 
-		      	$('#message-warning').html("Something went wrong. Please try again.");
-		         $('#message-warning').fadeIn();
-
-		      }
-
-	      });     		
-  		}
-
-	});
+	$(document).ready(function() {
+		// handle form submission
+		$("#contactForm").submit(function(event) {
+		  // prevent default form behavior
+		  event.preventDefault();
+		  // show the submit loader
+		  $("#submit-loader").fadeIn();
+		  // submit the form via AJAX
+		  $.ajax({
+			url: $(this).attr("action"),
+			method: $(this).attr("method"),
+			data: $(this).serialize(),
+			dataType: "json",
+			success: function(data) {
+			  // hide the submit loader
+			  $("#submit-loader").fadeOut();
+			  // show the success message
+			  $("#message-success").fadeIn().html("<i class='fa fa-check'></i>Your message was sent, thank you!<br>");
+			  // reset the form
+			  $("#contactForm")[0].reset();
+			},
+			error: function(xhr, status, error) {
+			  // hide the submit loader
+			  $("#submit-loader").fadeOut();
+			  // show the error message
+			  $("#message-warning").fadeIn().html("<i class='fa fa-warning'></i> " + xhr.responseJSON.errors[0].message);
+			}
+		  });
+		});
+	  });
 
 
  	/*----------------------------------------------------- */
