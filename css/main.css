@@ -1435,7 +1435,7 @@ header .logo a {
 	text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 .intro-content .intro-position {
-	font-family: "lora-regular", serif;
+	font-family: "poppins", sans-serif;
 	font-size: 1.7rem;
 	line-height: 2.4rem;
 	text-transform: capitalize;
@@ -1876,35 +1876,41 @@ header .logo a {
  */
 
 
+/* --- Modernized Portfolio Filters --- */
 #portfolio-flters {
-    text-align: center;
-  }
-
-
-#portfolio-flters {
-	list-style: none;
-	margin-bottom: 20px;
+    list-style: none;
+    margin-bottom: 4rem; /* More space below the filters */
+    padding: 0;
+    text-align: center; /* Ensures it works on all browsers */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows filters to wrap on mobile */
+    gap: 10px; /* Space between the pills */
 }
-  
+
 #portfolio-flters li {
-	cursor: pointer;
-	display: inline-block;
-	margin: 0 10px 10px 10px;
-	font-size: 15px;
-	font-weight: 600;
-	line-height: 1;
-	padding: 7px 10px;
-	text-transform: proppercase;
-	color: #444444;
-	transition: all 0.3s ease-in-out;
-	border: 2px solid #fff;
-  }
-  
-#portfolio-flters li:hover,
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 22px; /* More padding for a better shape */
+    font-size: 1.4rem; /* Slightly smaller, cleaner font */
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #444444;
+    background-color: #f2f2f2; /* Default pill background */
+    border-radius: 50px; /* This creates the pill shape */
+    transition: all 0.3s ease-in-out;
+}
+
+#portfolio-flters li:hover {
+    background-color: #e0e0e0; /* A darker hover state */
+}
+
 #portfolio-flters li.filter-active {
-	color: #cc005f;
-	border-color: #cc005f;
-  }
+    background-color: #cc005f; /* Your theme's accent color */
+    color: #FFFFFF;
+}
   
 
 #portfolio {
@@ -1916,6 +1922,9 @@ header .logo a {
 	padding: 0;
 	position: relative;
 	overflow: hidden;
+	border-radius: 8px; /* Softens the sharp corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Adds a subtle, modern shadow */
+
 }
 #portfolio .folio-item img {
 	vertical-align: middle;
@@ -2751,7 +2760,84 @@ footer .copyright span:last-child::after {
 /*----------------------------------------------------
 	*. About me Style
 ------------------------------------------------------*/
-.about-row {
+
+/* ===================================================================
+ * ## 11. About Section - REVISED WITH GRID
+ *
+ * ------------------------------------------------------------------- */
+#about {
+	background: #FFFFFF;
+	padding-top: 12rem;
+	padding-bottom: 12rem;
+}
+
+/* --- Profile Section (No changes needed here) --- */
+.about-profile {
+    padding-bottom: 8rem;
+    display: flex;
+    align-items: center;
+}
+.profile-pic {
+	max-width: 150px;
+	border-radius: 50%;
+    margin: 0 auto;
+}
+.about-profile h3 {
+    font-family: "poppins-bold", sans-serif;
+	font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+.about-profile .button {
+    margin-top: 2rem;
+    margin-right: 1rem;
+}
+@media screen and (max-width: 768px) {
+    .about-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-pic {
+        margin-bottom: 0rem;
+    }
+}
+
+
+/* --- NEW: Competencies Section using CSS GRID --- */
+.competencies-grid .section-head {
+    text-align: center;
+    margin-bottom: 5rem;
+    font-family: "poppins-bold", sans-serif;
+	font-size: 2.2rem;
+    /* Make the title span the full grid width */
+    grid-column: 1 / -1;
+}
+
+/* This is the container for the 3 competency boxes */
+.competencies-grid {
+    display: grid;
+    /* This is the magic line for a responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem; /* The space between the grid items */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-box {
+    text-align: center;
+    padding: 0 20px;
+    /* No margin-bottom needed anymore, gap handles it */
+}
+.service-icon {
+    font-size: 4.5rem;
+    color: #cc005f;
+    margin-bottom: 2rem;
+}
+.service-title {
+    font-family: "poppins-semibold", sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+/* .about-row {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -2787,7 +2873,7 @@ footer .copyright span:last-child::after {
 	margin-left: 10px;
 }	 */
 
-.about-row img {
+/* .about-row img {
 	margin-top: 20px;
 	margin-bottom: 20px;
   }
@@ -2897,77 +2983,90 @@ footer .copyright span:last-child::after {
   }
 #about .btn-primary:hover {
 	color:#979497;
-}
+} */
+
 
 /*----------------------------------------------------
 	5. Skill & Expert Style
 ------------------------------------------------------*/
-/* --- New #skills Section CSS (Flexbox Version) --- */
+/* ------------------------------------------------------------------- 
+ * ## 12. Skills Section (Modernized)
+ * ------------------------------------------------------------------- */
 #skills {
-	background:#f8f8f8;
+	background: #f8f8f8;
 	padding-top: 12rem;
 	padding-bottom: 12rem;
 }
 
+/* --- New #skills Section CSS (Grid Version) --- */
+
 /* This is the container for all our skill groups */
 .skills-content {
-    display: flex; /* CHANGE: Use Flexbox instead of Grid */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: center; /* Center the groups horizontally */
-    gap: 4rem; /* The space between the groups */
-    max-width: 1200px; /* Increased max-width slightly */
+    display: grid; /* CHANGE: Use Grid instead of Flexbox */
+    
+    /* This is the magic line for a responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    
+    gap: 3rem; /* The space between the grid items */
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.skill-group {
-    flex: 1; /* Allow groups to grow */
-    min-width: 400px; /* Set a minimum width for each group */
-    max-width: 500px; /* Optional: Set a max width to keep them neat */
+/* remove content: "" form :before and :after  */
+.skills-content::before,
+.skills-content::after {
+	content: none; /* CHANGE: No need for pseudo-elements */
 }
+
+/* The card for each group of skills */
+.skill-group {
+    background: #FFFFFF;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    /* No flex, min-width, or max-width properties needed here anymore! */
+}
+
+
+/* --- The styles below this line remain the same --- */
 
 .skill-group h4 {
     font-family: "poppins-bold", sans-serif;
     font-size: 1.8rem;
     color: #313131;
-    margin-bottom: 2rem;
-    position: relative;
-    padding-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
-.skill-group h4::after {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 3px;
-    background-color: #cc005f;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem 2rem;
 }
 
-.skill-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    transition: transform 0.3s ease;
 }
 
-.skill-list li {
-    background-color: #f0f0f0;
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+.skill-item i {
+    font-size: 4rem;
     color: #555;
-    padding: 8px 15px;
-    margin: 0 8px 8px 0;
-    display: inline-block;
-    border-radius: 5px;
-    font-family: "poppins-regular", sans-serif;
-    font-size: 1.4rem;
-    transition: all 0.3s ease;
+    margin-bottom: 1rem;
 }
 
-.skill-list li:hover {
-    background-color: #cc005f;
-    color: #FFFFFF;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.skill-item span {
+    font-family: "poppins-regular", sans-serif;
+    font-size: 1.3rem;
+    color: #666;
 }
 
 

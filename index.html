@@ -25,6 +25,10 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/vendor.css">
 
+	<!-- ADD THIS LINE FOR TECH ICONS -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
+
 	<!-- script
    ================================================== -->
 	<script src="js/modernizr.js"></script>
@@ -123,55 +127,71 @@
 	</section> <!-- /intro -->
 
 
-	<!-- about section
-   ================================================== -->
-	<section id="about">
-	
-		<div class="row section-intro">
-			<div class="col-twelve">
-	
-				<h2>About Me</h2>
-				<h3>Let me introduce myself.</h3>
-	
-	
-			</div>
-	
-		</div> <!-- /section-intro -->
-	
-		<div class="row about-row">
-			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 media">
-				<img src="images/Yacine-Ammi.jpg" />
-			</div>
-			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 about-content">
-				<!-- <h5>Yacine Ammi</h5>
-					<h4>Statistician &amp; Data Scientist</h4> -->
-				<p>As a data professional with a foundation in Applied Statistics and a passion for decarbonization, I
-					specialize in transforming complex environmental and business data into actionable levers for change. My
-					current work as a Climate Data Analyst at Opella involves building automated Python pipelines to analyze
-					Scope 3 emissions, creating performance dashboards, and collaborating across teams to drive sustainable
-					decisions.</p>
-				<p>My journey has equipped me with a versatile skill set across the data lifecycle. At AOPS Conseil, I
-					engineered predictive models with 83% accuracy and automated data processing pipelines. Previously, I
-					honed my analytical skills by detecting production anomalies at SNAX and developing customer churn
-					models at ATM Mobilis. This experience is built on a robust technical toolkit, including Python (Pandas,
-					Scikit-learn), SQL, Power BI, and foundational knowledge of Data Engineering principles like ETL,
-					Docker, and cloud platforms. </p>
-				<p>I am driven by the challenge of solving meaningful problems and am currently deepening my expertise
-					through a Master's in Data Engineering & Cloud Computing. I believe the future lies in building robust,
-					scalable data systems, and I am eager to apply my hybrid skills in data analysis, science, and
-					engineering to create impactful, data-driven solutions. </p>
-				<!--<div><a role="button" class="res"
-							href="https://drive.google.com/file/d/1-TJT0g8rkRYyRHgnjv8OOUIonKAtejP-/view?usp=sharing"
-							target="_blank">Printable Resume</a>
-					</div>-->
-			</div>
-		</div>
-	</section>
+	<!-- ================================================== -->
+<!-- About Section                                      -->
+<!-- ================================================== -->
+<section id="about">
 
-	<!-- Skills section
-   ================================================== -->
+    <div class="row section-intro">
+        <div class="col-twelve">
+            <h2>About Me</h2>
+            <h3>Let me introduce myself.</h3>
+        </div>
+    </div> <!-- /section-intro -->
+
+    <!-- Profile Section -->
+    <div class="row about-profile">
+        <div class="col-four">
+            <img class="profile-pic" src="images/Yacine-Ammi.jpg" alt="Yacine Ammi Profile Photo" />
+        </div>
+        <div class="col-eight">
+            <h3>Who I Am</h3>
+            <p>
+                I am a data professional with a foundation in Applied Statistics, driven to transform complex data into actionable insights and robust engineering solutions. My passion lies at the intersection of statistical analysis, machine learning, and building the data systems that power them.
+            </p>
+            <!-- <a href="#contact" class="button stroke smoothscroll">Get In Touch</a>
+            <a href="YOUR_RESUME_LINK_HERE" target="_blank" class="button">Download Resume</a> -->
+        </div>
+    </div> <!-- /about-profile -->
+
+    <!-- Core Competencies Section -->
+    <div class="row about-competencies">
+        <div class="col-twelve">
+            <!-- <h3 class="section-head">My Core Competencies</h3> -->
+        </div>
+
+        <!-- Competency Box 1: Analysis -->
+        <div class="col-four">
+            <div class="service-box">
+                <div class="service-icon"><i class="fa fa-line-chart"></i></div>
+                <h4 class="service-title">Data Analysis</h4>
+                <p>I translate raw data into clear narratives, building dashboards and reports that track KPIs and reveal key business trends for informed decision-making.</p>
+            </div>
+        </div>
+
+        <!-- Competency Box 2: Science -->
+        <div class="col-four">
+            <div class="service-box">
+                <div class="service-icon"><i class="fa fa-flask"></i></div>
+                <h4 class="service-title">Data Science</h4>
+                <p>From clustering to classification, I leverage machine learning models to predict future outcomes, such as customer behavior or system failures.</p>
+            </div>
+        </div>
+
+        <!-- Competency Box 3: Engineering -->
+        <div class="col-four">
+            <div class="service-box">
+                <div class="service-icon"><i class="fa fa-cogs"></i></div>
+                <h4 class="service-title">Data Engineering</h4>
+                <p>I design and build automated data pipelines (ETL/ELT), ensuring data is clean, reliable, and efficiently delivered for analysis and modeling.</p>
+            </div>
+        </div>
+    </div> <!-- /about-competencies -->
+
+</section>
+
 	<section id="skills">
-		<div class="row section-intro">
+    <div class="row section-intro">
         <div class="col-twelve">
             <h2>My Tech Stack</h2>
             <h3>The tools and technologies I use to bring data to life.</h3>
@@ -179,53 +199,47 @@
     </div> <!-- /section-intro -->
 
     <div class="row skills-content">
-
+        
+        <!-- Group 1: Languages & Data Science -->
         <div class="skill-group">
-            <h4>Languages & Core Libraries</h4>
-            <ul class="skill-list">
-                <li>Python</li>
-                <li>SQL</li>
-                <li>R</li>
-                <li>VBA</li>
-                <li>Pandas</li>
-                <li>NumPy</li>
-                <li>Scikit-learn</li>
-            </ul>
+            <h4>Languages & Data Science</h4>
+            <div class="skill-items">
+                <div class="skill-item"><i class="devicon-python-plain"></i><span>Python</span></div>
+                <!-- <div class="skill-item"><i class="devicon-r-plain"></i><span>R</span></div> -->
+                <div class="skill-item"><i class="devicon-cplusplus-plain"></i><span>VBA/C++</span></div>
+                <div class="skill-item"><i class="devicon-pandas-plain"></i><span>Pandas</span></div>
+                <div class="skill-item"><i class="devicon-numpy-plain"></i><span>NumPy</span></div>
+				<div class="skill-item"><i class="devicon-keras-plain-wordmark"></i><span>Keras</span></div>
+                <div class="skill-item"><i class="devicon-tensorflow-original"></i><span>TensorFlow</span></div>
+				<div class="skill-item"><i class="devicon-scikitlearn-plain"></i><span>Scikit-learn</span></div>
+            </div>
         </div>
 
+        <!-- Group 2: Databases & Engineering -->
         <div class="skill-group">
-            <h4>Data Engineering & Databases</h4>
-            <ul class="skill-list">
-                <li>ETL Pipelines</li>
-                <li>Docker</li>
-                <li>REST APIs</li>
-                <li>MySQL</li>
-                <li>Spark (Basics)</li>
-                <li>NoSQL (Basics)</li>
-            </ul>
+            <h4>Databases & Engineering</h4>
+            <div class="skill-items">
+                <div class="skill-item"><i class="devicon-azuresqldatabase-plain"></i><span>SQL</span></div>
+                <div class="skill-item"><i class="devicon-docker-plain"></i><span>Docker</span></div>
+                <div class="skill-item"><i class="devicon-git-plain"></i><span>Git & APIs</span></div>
+                <div class="skill-item"><i class="devicon-apachespark-plain-wordmark"></i><span>Spark</span></div>
+                <div class="skill-item"><i class="devicon-mongodb-plain"></i><span>NoSQL</span></div>
+                <div class="skill-item"><i class="devicon-linux-plain"></i><span>ETL</span></div>
+				<div class="skill-item"><i class="devicon-apacheairflow-plain-wordmark"></i><span>Airflow</span></div>
+				
+            </div>
         </div>
-
+        
+        <!-- Group 3: Visualization & Cloud -->
         <div class="skill-group">
-            <h4>Visualization & BI</h4>
-            <ul class="skill-list">
-                <li>Power BI</li>
-                <li>Tableau</li>
-                <li>Matplotlib</li>
-                <li>Seaborn</li>
-                <li>ggplot2</li>
-                <li>Excel</li>
-            </ul>
-        </div>
-
-        <div class="skill-group">
-            <h4>Machine Learning & Cloud</h4>
-            <ul class="skill-list">
-                <li>XGBoost</li>
-                <li>Deep Learning (Keras/TF)</li>
-                <li>NLP (Basics)</li>
-                <li>AWS (Basic)</li>
-				<li>Google Cloud (Basic)</li>
-            </ul>
+            <h4>Visualization & Cloud</h4>
+            <div class="skill-items">
+                <div class="skill-item"><i class="fa fa-bar-chart"></i><span>Power BI & Tableau</span></div>
+                <div class="skill-item"><i class="devicon-amazonwebservices-plain-wordmark"></i><span>AWS</span></div>
+                <div class="skill-item"><i class="devicon-googlecloud-plain"></i><span>Google Cloud</span></div>
+                <div class="skill-item"><i class="devicon-matplotlib-plain"></i><span>Matplotlib</span></div>
+                <div class="skill-item"><i class="fa fa-file-excel-o"></i><span>Excel</span></div>
+            </div>
         </div>
 
     </div> <!-- /skills-content -->
@@ -234,9 +248,9 @@
 
 
 		<!-- services Section
-	   ================================================== -->
-
-		<div class="row services-content">
+	   ================================================== 
+	   
+	   <div class="row services-content">
 
 			<div id="owl-slider" class="owl-carousel services-list">
 
@@ -259,7 +273,7 @@
 						</p>
 					</div>
 
-				</div> <!-- /service -->
+				</div> 
 
 				<div class="service">
 
@@ -280,7 +294,7 @@
 
 					</div>
 
-				</div> <!-- /service -->
+				</div> 
 
 				<div class="service">
 
@@ -299,7 +313,7 @@
 
 					</div>
 
-				</div> <!-- /service -->
+				</div> 
 
 				<div class="service">
 
@@ -318,7 +332,7 @@
 
 					</div>
 
-				</div> <!-- /service -->
+				</div> 
 
 				<div class="service">
 
@@ -337,7 +351,7 @@
 
 					</div>
 
-				</div> <!-- /service -->
+				</div> 
 
 				<div class="service">
 
@@ -356,13 +370,13 @@
 
 					</div>
 
-				</div> <!-- /service -->
+				</div> 
 
-			</div> <!-- /services-list -->
+			</div> 
 
-		</div> <!-- /services-content -->
+		</div>  -->
 
-	</section> <!-- /process-->
+	</section> 
 
 	<!-- Portfolio Section
    ================================================== -->
@@ -372,21 +386,21 @@
 			<div class="col-twelve">
 
 				<h2>Portfolio</h2>
-				<h3>Check Out Some of My Works.</h3>
-				<p class="lead">This section showcases my professional experience, skills, and accomplishments in the
+				<h3>Check Out Some of My Work.</h3>
+				<!-- <p class="lead">This section showcases my professional experience, skills, and accomplishments in the
 					fields of data
 					analysis, statistics, and machine learning. Here, you will find examples of my work, including
 					projects, reports,
-					codes, and visualizations.</p>
+					codes, and visualizations.</p> -->
 
 			</div>
 		</div> <!-- /section-intro-->
 
 		<ul id="portfolio-flters" class="d-flex justify-content-center">
 			<li data-filter="*" class="filter-active">All</li>
-			<li data-filter=".filter-data-analysis">Data Analysis</li>
+			<li data-filter=".filter-analysis">Data Analysis</li>
 			<li data-filter=".filter-machine-learning">Machine Learning</li>
-			<li data-filter=".filter-visualisation">Visualization</li>
+			<li data-filter=".filter-engineering">Data Engineering</li>
 		</ul>
 
 		<div class="row portfolio-content">
@@ -428,7 +442,7 @@
 						</div>
 					</div> <!-- /folio-item -->
 
-					<div class="bgrid folio-item filter-visualisation">
+					<div class="bgrid folio-item filter-analysis">
 						<div class="item-wrap">
 							<img src="images/portfolio/Employee Attrition.png" alt="Electricity">
 							<a href="#modal-03" class="overlay">
@@ -436,7 +450,7 @@
 									<div class="folio-item-cell">
 										<h3 class="folio-title">Employee Attrition Dashbord</h3>
 										<span class="folio-types">
-											Visualization
+											Data Analysis
 										</span>
 									</div>
 								</div>
@@ -460,7 +474,7 @@
 						</div>
 					</div> <!-- /folio-item -->
 
-					<div class="bgrid folio-item filter-data-analysis">
+					<div class="bgrid folio-item filter-analysis">
 						<div class="item-wrap">
 							<img src="images/portfolio/Obesity Factors S.png" alt="Obesity">
 							<a href="#modal-05" class="overlay">
@@ -469,6 +483,40 @@
 										<h3 class="folio-title">Obesity Factors Analysis</h3>
 										<span class="folio-types">
 											Data Analysis
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div> <!-- /folio-item -->
+
+					<!-- Item for HBase Project -->
+					<div class="bgrid folio-item filter-engineering">
+						<div class="item-wrap">
+							<img src="images/portfolio/hbase-crime-data.png" alt="HBase Project Thumbnail">
+							<a href="#modal-06" class="overlay">
+								<div class="folio-item-table">
+									<div class="folio-item-cell">
+										<h3 class="folio-title">HBase Crime Data Analysis</h3>
+										<span class="folio-types">
+											Data Engineering
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div> <!-- /folio-item -->
+
+					<!-- Item for MongoDB Project -->
+					<div class="bgrid folio-item filter-engineering">
+						<div class="item-wrap">
+							<img src="images/portfolio/mongodb-medical-data.png" alt="MongoDB Project Thumbnail">
+							<a href="#modal-07" class="overlay">
+								<div class="folio-item-table">
+									<div class="folio-item-cell">
+										<h3 class="folio-title">Medical Data Migration ETL</h3>
+										<span class="folio-types">
+											Data Engineering
 										</span>
 									</div>
 								</div>
@@ -629,7 +677,43 @@
 
 					</div> <!-- /modal-05 -->
 
+					<!-- Modal Popup 06: HBase -->
+					<div id="modal-06" class="popup-modal slider mfp-hide">
+						<div class="media">
+							<img src="images/portfolio/hbase-crime-data.png" alt="HBase Project Detail" />
+						</div>
+						<div class="description-box">
+							<h4>HBase Los Angeles Crime Data Analysis</h4>
+							<p>This project demonstrates a full NoSQL data engineering pipeline: ingesting, modeling with efficient rowkeys, and querying 500k LA crime records using Apache HBase, Docker, and Python (happybase).</p>
+							<div class="categories">More Details:</div>
+							<div class="links">
+								<a href="https://github.com/yacine-ammi/hbase-la-crime-analysis" target="_blank">GitHub</a>
+								<!-- Add other links if you have them -->
+							</div>
+						</div>
+						<div class="link-box">
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+					</div><!-- /modal-06 -->
 
+					<!-- Modal Popup 07: MongoDB ETL -->
+					<div id="modal-07" class="popup-modal slider mfp-hide">
+						<div class="media">
+							<img src="images/portfolio/mongodb-medical-data.png" alt="MongoDB Project Detail" />
+						</div>
+						<div class="description-box">
+							<h4>Medical Data Migration to MongoDB</h4>
+							<p>An automated ETL pipeline using Docker and Python to ingest CSV medical data into MongoDB. The multi-container setup ensures a reproducible environment and prevents duplicate data ingestion.</p>
+							<div class="categories">More Details:</div>
+							<div class="links">
+								<a href="https://github.com/yacine-ammi/medical-data-migration-mongodb" target="_blank">GitHub</a>
+								<!-- Add other links if you have them -->
+							</div>
+						</div>
+						<div class="link-box">
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+					</div><!-- /modal-07 -->
 					<!-- modal popups - end
 			============================================================= -->
 
@@ -1116,6 +1200,30 @@
 		};
 
 		var typed = new Typed('#typed-text', options);
+	</script>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const tabButtons = document.querySelectorAll('.tab-button');
+			const tabPanels = document.querySelectorAll('.tab-panel');
+
+			tabButtons.forEach(button => {
+				button.addEventListener('click', () => {
+					// Deactivate all buttons and panels
+					tabButtons.forEach(btn => btn.classList.remove('active'));
+					tabPanels.forEach(panel => panel.classList.remove('active'));
+
+					// Activate the clicked button
+					button.classList.add('active');
+
+					// Activate the corresponding panel
+					const targetTab = document.getElementById(button.dataset.tab);
+					if (targetTab) {
+						targetTab.classList.add('active');
+					}
+				});
+			});
+		});
 	</script>
 
 </body>
