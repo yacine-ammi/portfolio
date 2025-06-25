@@ -1438,7 +1438,7 @@ header .logo a {
 	font-family: "lora-regular", serif;
 	font-size: 1.7rem;
 	line-height: 2.4rem;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	letter-spacing: .2rem;
 	color: #FFFFFF;
 	text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
@@ -1446,7 +1446,7 @@ header .logo a {
 .intro-content .intro-position span {
 	display: inline-block;
 }
-.intro-content .intro-position span::after {
+/* .intro-content .intro-position span::after {
 	content: "|";
 	text-align: center;
 	display: inline-block;
@@ -1459,7 +1459,7 @@ header .logo a {
 	display: inline-block;
 	padding: 0 14px 0 8px;
 	color: rgba(255, 255, 255, 0.3);
-}
+} */
 .intro-content .button {
 	color: #FFFFFF !important;
 	border-color: rgba(255, 255, 255, 0.3);
@@ -2902,116 +2902,72 @@ footer .copyright span:last-child::after {
 /*----------------------------------------------------
 	5. Skill & Expert Style
 ------------------------------------------------------*/
+/* --- New #skills Section CSS (Flexbox Version) --- */
 #skills {
-	background: #f8f8f8;
-	padding-top: 12rem;
-	padding-bottom: 15rem;
-}
-
-.skillset-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .col-left {
-    flex: 1;
-	display: flex;
-	align-items: center;
-  }
-
-  .col-right {
-    flex: 1;
-  }
-
-
- .skillset-row h5 {
-	font-family: 'Montserrat', sans-serif;
-	font-size: 20px;
-	color: #372d38;
-	line-height: 24px;
-	padding-bottom: 10px;
-	font-weight: 400;
-	margin: 0px;
-  }
-
- .skillset-row h4 {
-	font-family: 'Montserrat', sans-serif;
-	font-size: 25px;
-	line-height: 24px;
-	padding-bottom: 10px;
-	font-weight: 400;
-	margin: 0px;
-  }
-  
-
-.skillset {
 	background:#f8f8f8;
-	display:table;
-	width:100%;
-}
-.skillset .container{
-	padding-top:66px ;
-	padding-bottom:64px ;
-}
-.skillbar {
-	position:relative;
-	display:block;
-	margin-bottom:53px;
-	width:100%;
-	background:#e2e1e2;
-	height:7px;
-	border-radius:3px;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	-webkit-transition:0.4s linear;
-	-moz-transition:0.4s linear;
-	-ms-transition:0.4s linear;
-	-o-transition:0.4s linear;
-	transition:0.4s linear;
-	-webkit-transition-property:width, background-color;
-	-moz-transition-property:width, background-color;
-	-ms-transition-property:width, background-color;
-	-o-transition-property:width, background-color;
-	transition-property:width, background-color;
+	padding-top: 12rem;
+	padding-bottom: 12rem;
 }
 
-.skillbar-title {
-	position:absolute;
-	top:-27px;
-	left:0;
-	font-weight:bold;
-	font-size:13px;
-	line-height:27px;
-	text-transform:uppercase;
-	letter-spacing:2px;
-	color:#5b4c5c;
+/* This is the container for all our skill groups */
+.skills-content {
+    display: flex; /* CHANGE: Use Flexbox instead of Grid */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center the groups horizontally */
+    gap: 4rem; /* The space between the groups */
+    max-width: 1200px; /* Increased max-width slightly */
+    margin: 0 auto;
 }
 
-.skillbar-title span {
-	display:block;
+.skill-group {
+    flex: 1; /* Allow groups to grow */
+    min-width: 400px; /* Set a minimum width for each group */
+    max-width: 500px; /* Optional: Set a max width to keep them neat */
 }
 
-.skillbar-bar {
-	height:7px;
-	width:0px;
-	background:#e88988;
-	font-size: 14px;
-	line-height: 1.42857143;
-	color: #888089;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 1.42857143;
-	text-rendering: optimizelegibility;
+.skill-group h4 {
+    font-family: "poppins-bold", sans-serif;
+    font-size: 1.8rem;
+    color: #313131;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
 }
 
-.skill-bar-percent {
-	position:absolute;
-	top:-24px;
-	font-size:14px;
-	color:#796f7a;
-	margin-left:-20px;
+.skill-group h4::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #cc005f;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.skill-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skill-list li {
+    background-color: #f0f0f0;
+    color: #555;
+    padding: 8px 15px;
+    margin: 0 8px 8px 0;
+    display: inline-block;
+    border-radius: 5px;
+    font-family: "poppins-regular", sans-serif;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.skill-list li:hover {
+    background-color: #cc005f;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 
