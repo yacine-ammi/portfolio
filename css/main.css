@@ -2773,7 +2773,7 @@ footer .copyright span:last-child::after {
 
 /* --- Profile Section (No changes needed here) --- */
 .about-profile {
-    padding-bottom: 8rem;
+    /* padding-bottom: 8rem; */
     display: flex;
     align-items: center;
 }
@@ -2803,24 +2803,42 @@ footer .copyright span:last-child::after {
 
 
 /* --- NEW: Competencies Section using CSS GRID --- */
-.competencies-grid .section-head {
+
+/*----------------------------------------------------
+	4. Competencies & Services Style 
+------------------------------------------------------*/
+
+.about-competencies{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1200px; /* Optional: Constrain the max width */
+    margin: 0 auto;    /* Center the container */
+}
+
+/* remove content: "" form :before and :after  */
+.about-competencies::before,
+.skills-content::after {
+	content: none; /* CHANGE: No need for pseudo-elements */
+}
+
+
+/* .competencies-grid .section-head {
     text-align: center;
     margin-bottom: 5rem;
     font-family: "poppins-bold", sans-serif;
 	font-size: 2.2rem;
-    /* Make the title span the full grid width */
     grid-column: 1 / -1;
-}
+} */
 
 /* This is the container for the 3 competency boxes */
-.competencies-grid {
+/* .competencies-grid {
     display: grid;
-    /* This is the magic line for a responsive grid */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem; /* The space between the grid items */
+    gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
-}
+} */
 
 .service-box {
     text-align: center;
@@ -2984,6 +3002,7 @@ footer .copyright span:last-child::after {
 #about .btn-primary:hover {
 	color:#979497;
 } */
+
 
 
 /*----------------------------------------------------
@@ -3218,3 +3237,89 @@ footer .copyright span:last-child::after {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+/* ===================================================================
+ * ## Work Experience Timeline
+ *
+ * ------------------------------------------------------------------- */
+.timeline-wrap {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* The central vertical line */
+.timeline-wrap::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #f2f2f2;
+}
+
+.timeline-block {
+    position: relative;
+    margin: 0 0 3rem 60px; /* Left margin creates space for icon and line */
+}
+
+/* The icon circle */
+.timeline-ico {
+    position: absolute;
+    left: -60px; /* (60px margin - (40px width / 2)) - 2px border? = 40px */
+    top: 0;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    border-radius: 50%;
+    background: #cc005f; /* Your theme's accent color */
+    color: #FFFFFF;
+    font-size: 1.8rem;
+}
+
+.timeline-header h3 {
+    font-family: "poppins-bold", sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+.timeline-header p {
+    font-family: "poppins-regular", sans-serif;
+    font-size: 1.4rem;
+    color: #888;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-content {
+    background: #FFFFFF;
+    padding: 2.5rem 3rem;
+    border-radius: 8px;
+    border: 1px solid #f2f2f2;
+}
+.timeline-content h4 {
+    font-family: "poppins-semibold", sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+.timeline-content ul {
+    list-style-position: inside;
+    padding-left: 5px;
+    margin-bottom: 2rem;
+}
+.timeline-content li {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* Skill tags styling (re-using a similar style for consistency) */
+.timeline-tags span {
+    background-color: #f0f0f0;
+    color: #555;
+    padding: 6px 12px;
+    margin: 0 6px 6px 0;
+    display: inline-block;
+    border-radius: 5px;
+    font-family: "poppins-regular", sans-serif;
+    font-size: 1.2rem;
+}
