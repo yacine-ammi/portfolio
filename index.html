@@ -34,14 +34,11 @@
 	<script src="js/modernizr.js"></script>
 	<script src="js/pace.min.js"></script>
 
-	<!-- favicons
-	================================================== -->
-	<!--link rel="icon" type="image/png" href="y-64.png"-->
-
-	<!-- Set the SVG as the favicon -->
-	<link rel="icon" type="image/svg+xml"
-		href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128' viewBox='0 0 128 128'%3E%3Cpath fill='%23FF0077' d='M114.89 16.69a2.36 2.36 0 0 0-2.09-1.25H90.5c-.77 0-1.5.38-1.94 1.02L64 51.74L39.43 16.45a2.346 2.346 0 0 0-1.94-1.02h-22.3c-.87 0-1.67.48-2.08 1.25s-.36 1.71.12 2.43l36.58 54.56v44.58c0 1.29 1.05 2.33 2.34 2.33h23.71c1.29 0 2.34-1.04 2.34-2.33V73.68l36.57-54.56c.48-.72.53-1.66.12-2.43z'/%3E%3C/svg%3E">
-
+	<!-- Set the favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
 
 	<!-- Isotope CSS -->
 	<link rel="stylesheet" href="https://unpkg.com/isotope-layout@3/dist/isotope.css" />
@@ -86,6 +83,11 @@
 	<!-- intro section
    ================================================== -->
 	<section id="intro">
+		
+		<!-- ADD THIS NEW DIV HERE 
+		<div class="availability-banner">
+			<span class="status-indicator"></span>Open to Opportunities
+		</div>-->
 
 		<div class="intro-overlay"></div>
 
@@ -97,16 +99,19 @@
 					<h5>Hello, Welcome.</h5>
 					<h1>I'm Yacine Ammi.</h1>
 
-					<!-- <p class="intro-position">
-						<span>Specializing in Data Science & Engineering</span>
-					</p> -->
 
 					<p class="intro-position">
 						<span id="typed-text"></span> <!-- We will target this ID with JavaScript, the intro is at the end of the document --> 
 					</p>
 
-					<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
+					
 
+					<!-- ADD THIS NEW DIV HERE -->
+					<div class="availability-banner">
+						<span class="status-indicator"></span>Open to Opportunities
+					</div>
+
+					
 				</div>
 
 			</div>
@@ -123,6 +128,10 @@
 						class="fa fa-facebook"></i></a></li>
 
 		</ul> <!-- /intro-social -->
+
+		<div class="scrolldown">
+			<a class="smoothscroll" href="#about"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+		</div>
 
 	</section> <!-- /intro -->
 
@@ -200,49 +209,67 @@
 
     <div class="row skills-content">
         
-        <!-- Group 1: Languages & Data Science -->
-        <div class="skill-group">
-            <h4>Languages & Data Science</h4>
-            <div class="skill-items">
-                <div class="skill-item"><i class="devicon-python-plain"></i><span>Python</span></div>
-                <!-- <div class="skill-item"><i class="devicon-r-plain"></i><span>R</span></div> -->
-                <div class="skill-item"><i class="devicon-cplusplus-plain"></i><span>VBA/C++</span></div>
-                <div class="skill-item"><i class="devicon-pandas-plain"></i><span>Pandas</span></div>
-                <div class="skill-item"><i class="devicon-numpy-plain"></i><span>NumPy</span></div>
-				<div class="skill-item"><i class="devicon-keras-plain-wordmark"></i><span>Keras</span></div>
-                <div class="skill-item"><i class="devicon-tensorflow-original"></i><span>TensorFlow</span></div>
-				<div class="skill-item"><i class="devicon-scikitlearn-plain"></i><span>Scikit-learn</span></div>
-            </div>
+    <!-- Group 1: Languages & Data Science -->
+    <div class="skill-group">
+        <h4>Languages & Data Science</h4>
+        <div class="skill-items">
+            <div class="skill-item"><i class="devicon-python-plain"></i><span>Python</span></div>
+            <!-- VBA Icon Updated -->
+            <div class="skill-item">
+				<!-- This is the NEW tag -->
+				<img src="images\svg\vba-custom-icon.svg" class="skill-svg-icon" alt="VBA Icon">
+				<span>VBA</span>
+			</div>
+            <div class="skill-item"><i class="devicon-pandas-plain"></i><span>Pandas</span></div>
+            <div class="skill-item"><i class="devicon-numpy-plain"></i><span>NumPy</span></div>
+            <div class="skill-item"><i class="devicon-scikitlearn-plain"></i><span>Scikit-learn</span></div>
+            <div class="skill-item"><i class="devicon-keras-plain"></i><span>Keras</span></div>
+            <div class="skill-item"><i class="devicon-tensorflow-original"></i><span>TensorFlow</span></div>
         </div>
+    </div>
 
-        <!-- Group 2: Databases & Engineering -->
-        <div class="skill-group">
-            <h4>Databases & Engineering</h4>
-            <div class="skill-items">
-                <div class="skill-item"><i class="devicon-azuresqldatabase-plain"></i><span>SQL</span></div>
-                <div class="skill-item"><i class="devicon-docker-plain"></i><span>Docker</span></div>
-                <div class="skill-item"><i class="devicon-git-plain"></i><span>Git & APIs</span></div>
-                <div class="skill-item"><i class="devicon-apachespark-plain-wordmark"></i><span>Spark</span></div>
-                <div class="skill-item"><i class="devicon-mongodb-plain"></i><span>NoSQL</span></div>
-                <div class="skill-item"><i class="devicon-linux-plain"></i><span>ETL</span></div>
-				<div class="skill-item"><i class="devicon-apacheairflow-plain-wordmark"></i><span>Airflow</span></div>
-				
-            </div>
+    <!-- Group 2: Databases & Engineering -->
+    <div class="skill-group">
+        <h4>Databases & Engineering</h4>
+        <div class="skill-items">
+            <div class="skill-item"><i class="devicon-azuresqldatabase-plain"></i><span>SQL</span></div>
+            <div class="skill-item"><i class="devicon-docker-plain"></i><span>Docker</span></div>
+			<div class="skill-item">
+				<!-- This is the NEW tag -->
+				<img src="images\svg\dbt-custom-icon.svg" class="skill-svg-icon" alt="DBT Icon">
+				<span>dbt</span>
+			</div>
+            <div class="skill-item"><i class="devicon-apacheairflow-plain"></i><span>Airflow</span></div>
+            <div class="skill-item"><i class="devicon-apachespark-plain"></i><span>Spark</span></div>
+            <div class="skill-item"><i class="devicon-mongodb-plain"></i><span>NoSQL</span></div>
+            <div class="skill-item"><i class="devicon-git-plain"></i><span>Git</span></div>
+            <div class="skill-item"><i class="devicon-linux-plain"></i><span>ETL</span></div>
         </div>
-        
-        <!-- Group 3: Visualization & Cloud -->
-        <div class="skill-group">
-            <h4>Visualization & Cloud</h4>
-            <div class="skill-items">
-                <div class="skill-item"><i class="fa fa-bar-chart"></i><span>Power BI & Tableau</span></div>
-                <div class="skill-item"><i class="devicon-amazonwebservices-plain-wordmark"></i><span>AWS</span></div>
-                <div class="skill-item"><i class="devicon-googlecloud-plain"></i><span>Google Cloud</span></div>
-                <div class="skill-item"><i class="devicon-matplotlib-plain"></i><span>Matplotlib</span></div>
-                <div class="skill-item"><i class="fa fa-file-excel-o"></i><span>Excel</span></div>
-            </div>
+    </div>
+    
+    <!-- Group 3: Visualization & Cloud -->
+    <div class="skill-group">
+        <h4>Visualization & Cloud</h4>
+        <div class="skill-items">
+            <div class="skill-item"><i class="fa fa-bar-chart"></i><span>Power BI</span></div>
+			<div class="skill-item">
+				<!-- This is the NEW tag -->
+				<img src="images\svg\tableau-custom-icon.svg" class="skill-svg-icon" alt="Tableau Icon">
+				<span>Tableau</span>
+			</div>
+			<div class="skill-item">
+				<!-- This is the NEW tag -->
+				<img src="images\svg\excel-custom-icon.svg" class="skill-svg-icon" alt="Excel Icon">
+				<span>Excel</span>
+			</div>
+            <div class="skill-item"><i class="devicon-amazonwebservices-plain-wordmark"></i><span>AWS</span></div>
+            <div class="skill-item"><i class="devicon-googlecloud-plain"></i><span>GCP</span></div>
+            <div class="skill-item"><i class="devicon-matplotlib-plain"></i><span>Matplotlib</span></div>
+			<div class="skill-item"><i class="devicon-plotly-plain"></i><span>Plotly</span></div>
         </div>
+    </div>
 
-    </div> <!-- /skills-content -->
+</div> <!-- /skills-content -->
 
 
 
@@ -490,6 +517,23 @@
 						</div>
 					</div> <!-- /folio-item -->
 
+					<!-- Item for Redis Project -->
+					<div class="bgrid folio-item filter-engineering">
+						<div class="item-wrap">
+							<img src="images/portfolio/redis_project.png" alt="Redis Project Thumbnail">
+							<a href="#modal-08" class="overlay">
+								<div class="folio-item-table">
+									<div class="folio-item-cell">
+										<h3 class="folio-title">Redis Movie & Actor Analysis</h3>
+										<span class="folio-types">
+											Data Engineering
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div> <!-- /folio-item -->
+
 					<!-- Item for HBase Project -->
 					<div class="bgrid folio-item filter-engineering">
 						<div class="item-wrap">
@@ -524,171 +568,213 @@
 						</div>
 					</div> <!-- /folio-item -->
 
-					<!-- modal popups - begin
-			============================================================= -->
+					<!-- Paste this new item inside your #folio-wrapper div -->
 
-					<div id="modal-01" class="popup-modal slider mfp-hide">
-
-						<div class="media">
-							<img src="images/portfolio/Customer Churn Prediction S.png" alt="" />
+					<!-- Item for Amazon Reviews Project -->
+					<div class="bgrid folio-item filter-analysis filter-engineering">
+						<div class="item-wrap">
+							<img src="images/portfolio/amazon_reviews_dashboard.png" alt="Amazon Reviews Pipeline Dashboard">
+							<a href="#modal-09" class="overlay">
+								<div class="folio-item-table">
+									<div class="folio-item-cell">
+										<h3 class="folio-title">Amazon Reviews E2E Pipeline Dashboard</h3>
+										<span class="folio-types">
+											Data Analysis / Data Engineering
+										</span>
+									</div>
+								</div>
+							</a>
 						</div>
+					</div> <!-- /folio-item -->
 
+					<!-- Item for Wine Quality Project -->
+					<div class="bgrid folio-item filter-machine-learning">
+						<div class="item-wrap">
+							<img src="images/portfolio/red_wine_quality.png" alt="Wine Quality Prediction Thumbnail">
+							<a href="#modal-10" class="overlay">
+								<div class="folio-item-table">
+									<div class="folio-item-cell">
+										<h3 class="folio-title">Wine Quality Prediction</h3>
+										<span class="folio-types">
+											Machine Learning
+										</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div> <!-- /folio-item -->
+
+					<!-- =============================================================
+					* ## MODAL POPUPS (Updated with Tech Tags)
+					*
+					============================================================== -->
+
+					<!-- Modal 01: Customer Churn Prediction -->
+					<div id="modal-01" class="popup-modal slider mfp-hide">
+						<div class="media">
+							<img src="images/portfolio/Customer Churn Prediction S.png" alt="Customer Churn Prediction" />
+						</div>
 						<div class="description-box">
 							<h4>Customer Churn Prediction</h4>
-							<p> The goal of this project is to analyze a dataset of customers from an anonymous telecom
-								company and predict whether
-								a customer will switch to another company or not using machine learning.</p>
-							<div class="categories">More Details:</div>
+							<p>A project to analyze a telecom dataset and build a machine learning model to predict customer churn, achieving high accuracy and providing actionable insights.</p>
+							
+							<div class="categories">Key Technologies:</div>
+							<div class="tech-tags">
+								<span>Python</span>
+								<span>Scikit-learn</span>
+								<span>Pandas</span>
+								<span>Jupyter</span>
+								<span>Machine Learning</span>
+							</div>
 
 							<div class="links">
-								<a href="https://nbviewer.jupyter.org/github/yacine-ammi/Mobile-CCP/blob/main/mobile-churn-ml-model.ipynb"
-									target="_blank">View Notebook</a>
-								<a href="https://www.kaggle.com/code/ammiyacine/mobile-churn-ml-model-92-accuracy/"
-									target="_blank">Kaggle</a>
+								<a href="https://nbviewer.jupyter.org/github/yacine-ammi/Mobile-CCP/blob/main/mobile-churn-ml-model.ipynb" target="_blank">View Notebook</a>
+								<a href="https://www.kaggle.com/code/ammiyacine/mobile-churn-ml-model-92-accuracy/" target="_blank">Kaggle</a>
 								<a href="https://github.com/yacine-ammi/Mobile-CCP" target="_blank">GitHub</a>
-								<!-- add more links here -->
 							</div>
 						</div>
-
 						<div class="link-box">
 							<a href="#" class="popup-modal-dismiss">Close</a>
 						</div>
-
 					</div> <!-- /modal-01 -->
 
+
+					<!-- Modal 02: Recommender System -->
 					<div id="modal-02" class="popup-modal slider mfp-hide">
-
 						<div class="media">
-							<img src="images/portfolio/Recommender System S.png" alt="" />
+							<img src="images/portfolio/Recommender System S.png" alt="Recommender System" />
 						</div>
-
 						<div class="description-box">
 							<h4>Recommender System</h4>
-							<p> In this project, I developped a recommender system using implicit data to improve
-								customer engagement and increase sales on a massive E-commerce dataset.</p>
-
-							<div class="categories">More Details:</div>
+							<p>Developed a recommender system using implicit data from a massive e-commerce dataset to improve customer engagement and increase sales.</p>
+							
+							<div class="categories">Key Technologies:</div>
+							<div class="tech-tags">
+								<span>Python</span>
+								<span>Pandas</span>
+								<span>Recommender Systems</span>
+								<span>Data Modeling</span>
+								<span>Implicit</span>
+							</div>
 
 							<div class="links">
-								<a href="https://nbviewer.jupyter.org/github/yacine-ammi/Recommender-System-Ecommerce-Implicit-Data/blob/main/recommendation-system.ipynb"
-									target="_blank">View Notebook</a>
-								<!-- <a href="https://www.kaggle.com/" target="_blank">Kaggle</a>-->
-								<a href="https://github.com/yacine-ammi/Recommender-System-Ecommerce-Implicit-Data"
-									target="_blank">GitHub</a>
-								<!-- add more links here -->
+								<a href="https://nbviewer.jupyter.org/github/yacine-ammi/Recommender-System-Ecommerce-Implicit-Data/blob/main/recommendation-system.ipynb" target="_blank">View Notebook</a>
+								<a href="https://github.com/yacine-ammi/Recommender-System-Ecommerce-Implicit-Data" target="_blank">GitHub</a>
 							</div>
 						</div>
-
 						<div class="link-box">
 							<a href="#" class="popup-modal-dismiss">Close</a>
 						</div>
-
 					</div> <!-- /modal-02 -->
 
+
+					<!-- Modal 03: Employee Attrition Dashboard -->
 					<div id="modal-03" class="popup-modal slider mfp-hide">
-
 						<div class="media">
-							<img src="images/portfolio/Employee Attrition.png" alt="Attrition" />
+							<img src="images/portfolio/Employee Attrition.png" alt="Employee Attrition Dashboard" />
 						</div>
-
 						<div class="description-box">
 							<h4>Employee Attrition Dashboard</h4>
-							<p>The employee attrition dashboard presents key insights about employee turnover,it also
-								provides visualizations and
-								interactive features to enable users to explore the data and identify trends and
-								patterns that can inform HR
-								strategies to reduce employee turnover.</p>
-
-							<div class="categories">More Details:</div>
+							<p>An interactive dashboard presenting key insights on employee turnover, enabling users to explore data and inform HR strategies to reduce attrition.</p>
+							
+							<div class="categories">Key Technologies:</div>
+							<div class="tech-tags">
+								<span>Tableau</span>
+								<span>Data Visualization</span>
+								<span>BI Dashboards</span>
+								<span>HR Analytics</span>
+							</div>
 
 							<div class="links">
-								<a href="https://public.tableau.com/app/profile/yacine.ammi/viz/EmployeeAttrition_16780562502210/AttritionDashboard"
-									target="_blank">Tableau Public</a>
-								<a href="https://www.kaggle.com/datasets/thedevastator/employee-attrition-and-factors"
-									target="_blank">Dataset</a>
-								<!-- add more links here -->
+								<a href="https://public.tableau.com/app/profile/yacine.ammi/viz/EmployeeAttrition_16780562502210/AttritionDashboard" target="_blank">Tableau Public</a>
+								<a href="https://www.kaggle.com/datasets/thedevastator/employee-attrition-and-factors" target="_blank">Dataset</a>
 							</div>
 						</div>
-
 						<div class="link-box">
 							<a href="#" class="popup-modal-dismiss">Close</a>
 						</div>
-
 					</div> <!-- /modal-03 -->
 
+
+					<!-- Modal 04: Electricity Consumption Analysis -->
 					<div id="modal-04" class="popup-modal slider mfp-hide">
-
 						<div class="media">
-							<img src="images/portfolio/electricity_consumption.png" alt="Electricity" />
+							<img src="images/portfolio/electricity_consumption.png" alt="Electricity Consumption Analysis" />
 						</div>
-
 						<div class="description-box">
 							<h4>Electricity Consumption Analysis</h4>
-							<p>The goal of this project was to analyze the electricity consumption per person in
-								Algeria, using time series analysis. The data was obtained from the
-								World Bank and the International Energy Agency and covers the period from 1971 to 2019.
-							</p>
+							<p>A time series analysis and forecast of electricity consumption in Algeria using data from the World Bank and the International Energy Agency.</p>
 
-							<div class="categories">More Details:</div>
+							<div class="categories">Key Technologies:</div>
+							<div class="tech-tags">
+								<span>Python</span>
+								<span>Time Series</span>
+								<span>Pandas</span>
+								<span>Matplotlib</span>
+								<span>Forecasting</span>
+							</div>
 
 							<div class="links">
-								<a href="https://nbviewer.jupyter.org/github/yacine-ammi/Algerian_Electricity_Consumption_Forecast/blob/main/electricity-consumption-forecast.ipynb"
-									target="_blank">View Notebook</a>
-								<a href="https://www.kaggle.com/code/ammiyacine/electricity-consumption-forecast/"
-									target="_blank">Kaggle</a>
-								<a href="https://github.com/yacine-ammi/Algerian_Electricity_Consumption_Forecast"
-									target="_blank">GitHub</a>
-								<!-- add more links here -->
+								<a href="https://nbviewer.jupyter.org/github/yacine-ammi/Algerian_Electricity_Consumption_Forecast/blob/main/electricity-consumption-forecast.ipynb" target="_blank">View Notebook</a>
+								<a href="https://www.kaggle.com/code/ammiyacine/electricity-consumption-forecast/" target="_blank">Kaggle</a>
+								<a href="https://github.com/yacine-ammi/Algerian_Electricity_Consumption_Forecast" target="_blank">GitHub</a>
 							</div>
 						</div>
-
 						<div class="link-box">
 							<a href="#" class="popup-modal-dismiss">Close</a>
 						</div>
-
 					</div> <!-- /modal-04 -->
 
+
+					<!-- Modal 05: Obesity Factors Analysis -->
 					<div id="modal-05" class="popup-modal slider mfp-hide">
-
 						<div class="media">
-							<img src="images/portfolio/Obesity Factors.png" alt="Obesity" />
+							<img src="images/portfolio/Obesity Factors.png" alt="Obesity Factors Analysis" />
 						</div>
-
 						<div class="description-box">
 							<h4>Obesity Factors Analysis</h4>
-							<p>The goal of this study is to identify the factors that affect obesity the most on the UCI
-								Obesity Dataset. To achieve this, three approaches
-								were used: PCA, classification, and regression.</p>
-							<div class="categories">More Details:</div>
+							<p>A study to identify the factors that most affect obesity using three distinct approaches: PCA for dimensionality reduction, classification, and regression.</p>
+
+							<div class="categories">Key Technologies:</div>
+							<div class="tech-tags">
+								<span>Python</span>
+								<span>PCA</span>
+								<span>Scikit-learn</span>
+								<span>Regression</span>
+								<span>Classification</span>
+							</div>
 
 							<div class="links">
-								<a href="https://nbviewer.org/github/yacine-ammi/Obesity-Factors-Analysis/blob/main/obesity-factors-analysis.ipynb"
-									target="_blank">View Notebook</a>
-								<!--<a href="https://www.kaggle.com/ammiyacine" target="_blank">Kaggle</a>-->
-								<a href="https://github.com/yacine-ammi/Obesity-Factors-Analysis"
-									target="_blank">GitHub</a>
-								<!-- add more links here -->
+								<a href="https://nbviewer.org/github/yacine-ammi/Obesity-Factors-Analysis/blob/main/obesity-factors-analysis.ipynb" target="_blank">View Notebook</a>
+								<a href="https://github.com/yacine-ammi/Obesity-Factors-Analysis" target="_blank">GitHub</a>
 							</div>
 						</div>
-
 						<div class="link-box">
 							<a href="#" class="popup-modal-dismiss">Close</a>
 						</div>
-
 					</div> <!-- /modal-05 -->
 
-					<!-- Modal Popup 06: HBase -->
+
+					<!-- Modal 06: HBase -->
 					<div id="modal-06" class="popup-modal slider mfp-hide">
 						<div class="media">
 							<img src="images/portfolio/hbase-crime-data.png" alt="HBase Project Detail" />
 						</div>
 						<div class="description-box">
 							<h4>HBase Los Angeles Crime Data Analysis</h4>
-							<p>This project demonstrates a full NoSQL data engineering pipeline: ingesting, modeling with efficient rowkeys, and querying 500k LA crime records using Apache HBase, Docker, and Python (happybase).</p>
-							<div class="categories">More Details:</div>
+							<p>This project demonstrates a full NoSQL data engineering pipeline: ingesting, modeling with efficient rowkeys, and querying 500k LA crime records using Apache HBase, Docker, and Python.</p>
+							
+							<div class="categories">Key Technologies:</div>
+							<div class="tech-tags">
+								<span>HBase</span>
+								<span>Docker</span>
+								<span>Python (happybase)</span>
+								<span>NoSQL</span>
+								<span>Big Data</span>
+							</div>
+
 							<div class="links">
-								<a href="https://github.com/yacine-ammi/hbase-la-crime-analysis" target="_blank">GitHub</a>
-								<!-- Add other links if you have them -->
+								<a href="https://github.com/yacine-ammi/hbase-la-crime-analysis" target="_blank">View on GitHub</a>
 							</div>
 						</div>
 						<div class="link-box">
@@ -696,7 +782,8 @@
 						</div>
 					</div><!-- /modal-06 -->
 
-					<!-- Modal Popup 07: MongoDB ETL -->
+
+					<!-- Modal 07: MongoDB ETL -->
 					<div id="modal-07" class="popup-modal slider mfp-hide">
 						<div class="media">
 							<img src="images/portfolio/mongodb-medical-data.png" alt="MongoDB Project Detail" />
@@ -704,20 +791,123 @@
 						<div class="description-box">
 							<h4>Medical Data Migration to MongoDB</h4>
 							<p>An automated ETL pipeline using Docker and Python to ingest CSV medical data into MongoDB. The multi-container setup ensures a reproducible environment and prevents duplicate data ingestion.</p>
-							<div class="categories">More Details:</div>
+							
+							<div class="categories">Key Technologies:</div>
+							<div class="tech-tags">
+								<span>MongoDB</span>
+								<span>Docker</span>
+								<span>Python</span>
+								<span>ETL</span>
+								<span>NoSQL</span>
+							</div>
+
 							<div class="links">
-								<a href="https://github.com/yacine-ammi/medical-data-migration-mongodb" target="_blank">GitHub</a>
-								<!-- Add other links if you have them -->
+								<a href="https://github.com/yacine-ammi/medical-data-migration-mongodb" target="_blank">View on GitHub</a>
 							</div>
 						</div>
 						<div class="link-box">
 							<a href="#" class="popup-modal-dismiss">Close</a>
 						</div>
 					</div><!-- /modal-07 -->
-					<!-- modal popups - end
-			============================================================= -->
+
+
+					<!-- Modal 08: Redis Project -->
+					<div id="modal-08" class="popup-modal slider mfp-hide">
+						<div class="media">
+							<img src="images/portfolio/redis_project_s.png" alt="Redis Project Detail" />
+						</div>
+						<div class="description-box">
+							<h4>Redis Movies & Actors Data Exploration</h4>
+							<p>A project showcasing a full data pipeline using Redis, a high-performance NoSQL database. This work involved setting up a Dockerized environment, loading datasets via Redis CLI, and performing complex queries and manipulations with Python.</p>
+							
+							<div class="categories">Key Technologies:</div>
+							<div class="tech-tags">
+								<span>Redis</span>
+								<span>Docker</span>
+								<span>Python (redis-py)</span>
+								<span>Jupyter</span>
+								<span>NoSQL</span>
+							</div>
+
+							<div class="links">
+								<a href="https://github.com/yacine-ammi/redis-movie-actors-project" target="_blank">View on GitHub</a>
+							</div>
+						</div>
+						<div class="link-box">
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+					</div><!-- /modal-08 -->
 
 				</div> <!-- /portfolio-wrapper -->
+
+				<!-- Modal Popup 09: Amazon Reviews Pipeline -->
+				<div id="modal-09" class="popup-modal slider mfp-hide">
+
+					<div class="media">
+						<!-- Use your excellent, full-size dashboard screenshot here -->
+						<img src="images/portfolio/amazon_reviews_dashboard_s.png" alt="Full Amazon Reviews Dashboard" />
+					</div>
+
+					<div class="description-box">
+						<h4>Amazon Reviews Dashboard</h4>
+						<p>This project features a complete data pipeline using Airflow for orchestration, PostgreSQL for storage, and dbt for transformation. My role focused on creating this Power BI dashboard to visualize key metrics like sentiment analysis, product popularity, and data quality test results from dbt.</p>
+						
+						<div class="categories">Key Technologies:</div>
+						<div class="tech-tags">
+							<span>Power BI</span>
+							<span>dbt</span>
+							<span>Airflow</span>
+							<span>PostgreSQL</span>
+							<span>SQL</span>
+							<span>ETL</span>
+						</div>
+
+						<div class="links">
+							<!-- This is the crucial part: linking to the PDF -->
+							<a href="https://drive.google.com/file/d/1rNQJGn3DQIIQn_VNTorCdyrWXVpqJyBH/view?usp=sharing" target="_blank">View Dashboard (PDF)</a>
+							<a href="https://github.com/TouaziAimenRyad/Amazon_reviews_dbt_pipeline#" target="_blank">View Pipeline on GitHub</a>
+						</div>
+					</div>
+
+					<div class="link-box">
+						<a href="#" class="popup-modal-dismiss">Close</a>
+					</div>
+
+				</div><!-- /modal-09 -->
+
+				<!-- Modal Popup 10: Wine Quality Prediction -->
+				<div id="modal-10" class="popup-modal slider mfp-hide">
+
+					<div class="media">
+						<!-- You'll need to create a larger image for the modal -->
+						<img src="images/portfolio/red_wine_quality_s.png" alt="Wine Quality Project Detail" />
+					</div>
+
+					<div class="description-box">
+						<h4>Wine Quality Prediction on an Imbalanced Dataset</h4>
+						<p>A machine learning pipeline to predict wine quality (binary classification) on a highly imbalanced dataset. The project focuses on handling class imbalance with SMOTE and Random Undersampling, applying PCA for dimensionality reduction, and benchmarking multiple models to select the best performer based on F1-Score.</p>
+						
+						<div class="categories">Key Technologies:</div>
+						<div class="tech-tags">
+							<span>Python</span>
+							<span>Scikit-learn</span>
+							<span>imbalanced-learn</span>
+							<span>PCA</span>
+							<span>Jupyter</span>
+						</div>
+
+						<div class="links">
+							<a href="https://github.com/yacine-ammi/red-wine-quality-classification" target="_blank">View on GitHub</a>
+							<a href="https://nbviewer.org/github/yacine-ammi/red-wine-quality-classification/blob/main/notebook/red-wine-quality-classification.ipynb" target="_blank">View Notebook</a>
+							<a href="https://www.kaggle.com/code/ammiyacine/red-wine-quality-classification" target="_blank">Kaggle</a>
+						</div>
+					</div>
+
+					<div class="link-box">
+						<a href="#" class="popup-modal-dismiss">Close</a>
+					</div>
+
+				</div><!-- /modal-10 -->
 
 			</div> <!-- /twelve -->
 
@@ -752,7 +942,7 @@
 						</div>
 						<div class="timeline-header">
 							<h3>Climate Data Analyst</h3>
-							<p>February 2024 - Ongoing</p>
+							<p>March 2025 - Ongoing</p>
 						</div>
 						<div class="timeline-content">
 							<h4>Opella | Paris, France</h4>
@@ -1381,12 +1571,12 @@
 
 			</div>
 
-			<!-- <div class="col-six tab-full">
+			<div class="col-six tab-full">
 				<div class="copyright">
 					<span>© Copyright Kards 2016.</span>
 					<span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>
 				</div>
-			</div> -->
+			</div>
 
 			<div id="go-top">
 				<a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
